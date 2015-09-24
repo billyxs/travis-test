@@ -9,6 +9,8 @@
  */
 angular.module('demoApp')
   .controller('MainCtrl', function () {
+    // making changes
+    this.awesome = 'yes';
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
