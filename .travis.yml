@@ -9,3 +9,18 @@ before_script:
   - npm install -g grunt-cli
   - bower install
 script: grunt
+deploy:
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: enroll-me-dev-hixme-com
+    endpoint: enroll-me-dev-hixme-com.s3-website-us-east-1.amazonaws.com
+    skip_cleanup: true
+    local-dir: dist
+    acl: public_read
+    detect_encoding: true
+    on:
+      branch: develop
+notifications:
+    email:
+        on_failure: always
