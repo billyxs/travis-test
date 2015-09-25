@@ -17,10 +17,6 @@ deploy:
   skip_cleanup: true
   local-dir: dist
   acl: public_read
-  detect_encoding: true
-  region: us-east-1
-  on:
-    branch: develop
 notifications:
   email:
     on_failure: always
