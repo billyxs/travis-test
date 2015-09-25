@@ -16,7 +16,6 @@ deploy:
   bucket: enroll-me-dev-hixme-com
   skip_cleanup: true
   local-dir: dist
-  acl: public_read
   on:
     branch: develop
 notifications:
